@@ -1,6 +1,6 @@
 import random
 
-# строка разрешенных к использованию в пароле символов
+
 avalaible_symbols = r'1234567890lkjhgfdsazxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM@#!'
 
 
@@ -12,15 +12,14 @@ def get_number():
             num = -1
 
         if num > 0:
-            break  # если ввели корректное число, то выходим из цикла опроса
-
+            break  
         print('Нужно ввести положительное целое число!')
 
     return num
 
 
 def generate_password(min_length, max_length):
-    pass_len = random.randint(min_length, max_length)  # получить случайную длину пароля в заданном диапазоне
+    pass_len = random.randint(min_length, max_length)  
     password = ''
     for i in range(1, pass_len + 1):  # +1 потому что правая граница в range не включена
         random_pos = random.randint(1, len(avalaible_symbols))  # получить случайный индекс из строки символов
